@@ -26,7 +26,7 @@ export const loadVideo = (path) => {
     const video = document.createElement("video");
     //video.addEventListener('loadeddata', () => {
     video.addEventListener("loadedmetadata", () => {
-      video.setAttribute("playsinline", "");
+      video.setAttribute("webkit-playsinline", "");
       video.setAttribute("loop", "");
       resolve(video);
     });
