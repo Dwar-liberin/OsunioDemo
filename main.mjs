@@ -22,11 +22,11 @@ document.addEventListener("DOMContentLoaded", () => {
     //   src: "./assets/logo/Button.png",
     // });
 
-    const iconGeometry = new THREE.PlaneGeometry(1.2, 0.4);
+    const iconGeometry = new THREE.PlaneGeometry(1.3, 0.4);
 
     const textureLoader = new THREE.TextureLoader();
 
-    const iconTexture = textureLoader.load("./assets/logo/saveIconred.jpg");
+    const iconTexture = textureLoader.load("./assets/logo/iconCal3.png");
 
     const imageMesh = new THREE.MeshBasicMaterial({
       map: iconTexture,
@@ -34,13 +34,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const planeMesh = new THREE.Mesh(iconGeometry, imageMesh);
 
-    planeMesh.scale.set(0.5, 0.5, 0.5);
+    planeMesh.scale.set(1, 1, 1);
 
-    // console.log("Video", videoPlane);
-
-    videoPlane.position.set(0, -0.2, 0);
+    videoPlane.position.set(0, -0.1, 0);
 
     videoPlane.userData.clickable = true; // set the user Data to clickable.
+    videoPlane.scale.set(2, 2, 2);
 
     planeMesh.position.set(0, -0.9, 0);
     planeMesh.userData.clickable = true;
