@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const light = new THREE.HemisphereLight(0xffffff, 0xbbbbff, 1);
 
     const { videoPlane, video } = await videoLoader({
-      path: "./assets/videos/iplVideo.mp4",
+      path: "./assets/videos/iplreal.mp4",
     });
 
     // const { planeMesh } = await imageLoader({
@@ -34,14 +34,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const planeMesh = new THREE.Mesh(iconGeometry, imageMesh);
 
-    planeMesh.scale.set(1, 1, 1);
+    planeMesh.scale.set(0.5, 0.5, 0.5);
 
-    videoPlane.position.set(0, -0.1, 0);
+    videoPlane.position.set(0, 0, 0);
 
     videoPlane.userData.clickable = true; // set the user Data to clickable.
-    videoPlane.scale.set(2, 2, 2);
+    // videoPlane.scale.set(2, 2, 2);
 
-    planeMesh.position.set(0, -0.9, 0);
+    planeMesh.position.set(0, -1, 0);
     planeMesh.userData.clickable = true;
 
     // const raccoon = await loadGLTF(
