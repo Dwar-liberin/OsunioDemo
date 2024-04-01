@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const light = new THREE.HemisphereLight(0xffffff, 0xbbbbff, 1);
 
     const { videoPlane, video } = await videoLoader({
-      path: "./assets/videos/iplreal.mp4",
+      path: "./assets/videos/agi.webm",
     });
 
     // const { planeMesh } = await imageLoader({
