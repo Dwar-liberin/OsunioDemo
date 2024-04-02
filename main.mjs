@@ -8,15 +8,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const start = async () => {
     const mindarThree = new MindARThree({
       container: document.body,
-      imageTargetSrc: "./assets/targets/ipl.mind",
+      imageTargetSrc: "./assets/targets/osunioDemo.mind",
     });
     const { renderer, scene, camera } = mindarThree;
 
     const light = new THREE.HemisphereLight(0xffffff, 0xbbbbff, 1);
 
     const { videoPlane, video } = await videoLoader({
-      path: "./assets/videos/agi.webm",
+      path: "./assets/videos/iplreal.mp4",
     });
+    const isIOS = navigator.appVersion.indexOf("Mac") != -1 ? true : false;
+    video.muted = isIOS;
 
     // const { planeMesh } = await imageLoader({
     //   src: "./assets/logo/Button.png",
@@ -36,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     planeMesh.scale.set(0.5, 0.5, 0.5);
 
-    videoPlane.position.set(0, 0, 0);
+    // videoPlane.position.set(0, 0, 0);
 
     videoPlane.userData.clickable = true; // set the user Data to clickable.
     // videoPlane.scale.set(2, 2, 2);
