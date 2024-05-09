@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const mindarThree = new window.MINDAR.IMAGE.MindARThree({
       container: document.body,
       imageTargetSrc: "./assets/targets/musicband.mind",
+      uiLoading: "#scanning-overlay",
     });
     const { renderer, scene, camera } = mindarThree;
 
